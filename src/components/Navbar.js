@@ -38,7 +38,7 @@ function Navbar() {
       navigate('/login')}
 
 
-
+console.log(isadmin);
     useEffect(()=>{
         if(jwtToken){
             setlogin(true);
@@ -54,7 +54,7 @@ function Navbar() {
         {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#" /> */}
         <div className="collapse navbar-collapse justify-content-end pe-5" id="navbarNav">
             <ul className="navbar-nav">
-                <li className={islogin?"nav-item px-2 fs-5 active":'d-none'}><NavLink className="nav-link" to="/account">Account</NavLink></li>
+                <li className={islogin?"nav-item px-2 fs-5 active":'d-none'}><NavLink className="nav-link" to="/admin">Account</NavLink></li>
                 <li className={islogin?'d-none':"nav-item px-2 fs-5 active"}><NavLink className="nav-link" to="/login">Login</NavLink></li>
                 <li className={islogin?'d-none':"nav-item px-2 fs-5 active"}><NavLink className="nav-link" to="/signup">Register</NavLink></li>
                 <li className={islogin?"nav-item px-2 fs-5 active":'d-none'}><NavLink className="nav-link" onClick={handleLogout}>logout</NavLink></li>
